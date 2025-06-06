@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background: #121212;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #00bfff;
+  text-decoration: none;
+  text-shadow: 0 0 8px #00bfff;
+  transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.menu a {
+  color: #ffffff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #00bfff; /* Tech blue hover */
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero p {
+  margin-top: 5rem;
+  margin-bottom: 0.1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00bfff; /* Tech blue headline */
+}
+
+.card, .projects {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  background-color: #1a1a1a;
+  border: 1px solid #2f2f2f;
+  border-radius: 12px;
+}
+
+.card h2, .projects h2 {
+  font-size: 1.8rem;
+  color: #00bfff; /* Tech blue section titles */
+  margin-bottom: 1rem;
+}
+
+.projects .subtext {
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project {
+  padding: 1rem;
+  background: #252525;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project .image {
+  background: #555;
+  height: 120px;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.project .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .org {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #00bfff; /* Tech blue org name */
+}
+
+.resume-view {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+  background-color: #000;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
+}
+
+.pdf-fallback a {
+  color: #00bfff;
+  text-decoration: underline;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.pdf-fallback a:hover {
+  color: #00bfff;
+  text-shadow: 0 0 6px #00bfff, 0 0 12px #00bfff;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  background: #121212;
+  border-top: 1px solid #2a2a2a;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Social Icons Section */
+.social-icons {
+  margin: 0.5rem 0 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a:nth-child(1):hover {
+  color: #FFA500; /* GitHub - orange */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #0077b5; /* LinkedIn - blue */
+}
+
+.social-icons a:nth-child(3):hover {
+  color: #90EE90; /* Email - light green */
+}
+
+/* Glow Effect Enhancements */
+.hero h1, .card h2, .projects h2, .project .org {
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.logo {
+  text-shadow: 0 0 8px #00bfff;
+}
+
+a:hover {
+  text-shadow: 0 0 6px #00bfff;
+}
+
+.project:hover {
+  box-shadow: 0 0 10px #00bfff55, 0 0 20px #00bfff33;
+}
+
+.project-list {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-list li::marker {
+  color: #00bfff; /* Tech blue bullets */
+}
+
+button, .btn, .cta {
+  background: transparent;
+  border: 2px solid #00bfff;
+  color: #00bfff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover, .btn:hover, .cta:hover {
+  background-color: #00bfff;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.tools-section h2 {
+  font-size: 1.8rem;
+  color: #00bfff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 1rem 0;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00bfff;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tool:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 6px #00bfff;
+}
+
+.tool-image img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px #00bfff44);
+}
+
+.tool-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #00bfff;
+  text-shadow: 0 0 6px #00bfff;
+}
+
+.hobbies-section h2 {
+  font-size: 1.8rem;
+  color: #00bfff;
+  text-align: left;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+  margin-bottom: 1rem;
+}
+
+.hobbies-section > p {
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hobby-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hobby-item {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  width: 200px;
+}
+
+.hobby-item:hover {
+  box-shadow: 0 0 10px #00bfff88, 0 0 20px #00bfff55;
+}
+
+.hobby-item h3 {
+  color: #00bfff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 8px #00bfff;
+}
+
+.hobby-title {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hobby-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #00bfff33;
+}
+
+.book-title {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.book-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.book-image img {
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00bfff55, 0 0 20px #00bfff33;
+}
+
+.hobby-desc {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link:hover .project {
+  box-shadow: 0 0 10px #00bfff55, 0 0 20px #00bfff33;
+  transform: translateY(-5px);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 1rem 0;
+}
+
+.skill {
+  text-align: center;
+  color: #00bfff;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 6px #00bfff;
+}
+
+.skill-image img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px #00bfff44);
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.section-subtext {
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
