@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andy Dong | Portfolio</title>
+  <title>How is today?</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="script.js"></script>
   
   <!-- SEO and social meta -->
   <meta name="description" content="Andy Dong | Portfolio - Projects, Resume, and Contact" />
@@ -14,7 +15,7 @@
   <meta property="og:type" content="website" />
   
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header class="nav">
@@ -48,27 +49,97 @@
     <p class="subtext">Here are some projects that I have done over the years</p>
     <div class="project-grid">
 
-      <a href="https://andyydongg.github.io/Times-Entertainment/" target="_blank" class="project-link">
+<div class="project">
+  <h3>Android Application Reverse Engineering</h3>
+  <p class="org">Drexel University: CT-335 | Mobile Applications Project</p>
+  <div class="image">
+  <img src="images/reverse-engineering.jpg" alt="ICS Project View" />
+</div>
+  <p>In this project I hacked into a andriod application:</p>
+  <ul class="project-list">
+    <li>Imported IntroAndroidSecurity and Andriodx86 virtual machines into Oracle VirtualBox</li>
+    <li>Installed Andriod CrackMe applications through .apk files in jadx-gui</li>
+    <li>Navigated through CrackMe application's source code and identified hash method used in application</li>
+    <li>Unhashed password stored in application source code to get passsword in plaintext</li>
+    <li>Gained access to application using username and unhashed passsword</li>
+  </ul>
+  <div class="skill-line"> Java <span class="dot">·</span> Oracle VirtualBox</div>
+</div>
+
+<div class="project">
+  <h3>Industrial Control Systems (ICS) Vulnerability Analysis</h3>
+  <p class="org">Drexel University: INFO-324 | Team Process and Product Course Project</p>
+  <div class="image">
+  <img src="images/ics-pic.jpg" alt="ICS Project View" />
+</div>
+  <p>In this project I collaborated with team members to:</p>
+  <ul class="project-list">
+    <li>Cleaned and coverted complex ICS data from Shodan using Python and Bash</li>
+    <li>Utilized Oracle SQL to store ICS data and run queries to formulate meaningful datasets</li>
+    <li>Centralized analysis and visualization of ICS data using Microsoft Excel and Tableau</li>
+  </ul>
+  <div class="skill-line"> Python <span class="dot">·</span> Oracle SQl <span class="dot">·</span> Bash <span class="dot">·</span> Shodan</div>
+</div>
+
+<a href="https://www.kaggle.com/datasets/artermiloff/steam-games-dataset" target="_blank" class="project-link">
+<div class="project">
+  <h3>Steam Games Dataset Analysis</h3>
+  <p class="org">Drexel University: INFO-210 | Database Management Systems Project</p>
+  <div class="image">
+  <img src="images/steamGames.jpg" alt="ICS Project View" />
+</div>
+  <p>The focus of this group project was to analyze data about steam games through:</p>
+  <ul class="project-list">
+    <li>Cleaned raw steam games data from Kaggle using Python and Oracle SQL</li>
+    <li>Designed relational normalized database through Vertabelo</li>
+    <li>Implemented and deployed designed database through Oracle SQL Developer</li>
+    <li>Ran queries in Oracle to preform detailed analysis about steam games</li>
+  </ul>
+  <div class="skill-line"> Oracle SQL <span class="dot">·</span> Vertabelo <span class="dot">·</span> Python </div>
+</div>
+</a>
+
+<a href="https://drexel.edu/it/security/services-processes/bug-bounty/" target="_blank" class="project-link">
+<div class="project">
+  <h3>Drexel Penetration Testing</h3>
+  <p class="org">Drexel University: CI-103 | Computing and Informatics Design III Project</p>
+  <div class="image">
+  <img src="images/bug-bounty.jpg" alt="ICS Project View" />
+</div>
+  <p>Took on the role as a Project Manager in a team setting to:</p>
+  <ul class="project-list">
+    <li>Participated in Drexel University Information Technology's Bug Bounty Progam</li>
+    <li>Scanned internet accessible resources within the .drexel.edu domain with a various online penetration testing tool and search engines</li>
+    <li>Organized scan results can classify found vulnerabilities by severity and identify plausible targets for penetration testing</li>
+    <li>Preformed penetration tests against multiple .drexe.edu domains and website</li>
+    <li>Reported compiled test results with scan results to Drexel Information Technology</li>
+    <li>Recognized by Drexel Information Technology for reporting an unknown vulnerability within the .drexel.edu domain in August 2024</li>
+  </ul>
+  <div class="skill-line"> Python <span class="dot">·</span> Oracle SQl <span class="dot">·</span> Shodan <span class="dot">·</span> Wireshark</div>
+</div>
+</a>
+
+<a href="https://andyydongg.github.io/Times-Entertainment/" target="_blank" class="project-link">
 <div class="project">
   <h3>Times Entertainment</h3>
-  <p class="org">Drexel University: INFO-151-001 | Web Systems and Services I Course Project</p>
+  <p class="org">Drexel University: INFO-151 | Web Systems and Services I Course Project</p>
   <div class="image">
   <img src="images/timesEntertainment.png" alt="Times Entertainment Project View" />
 </div>
   <p>This website offers a small collection of things to do in one's spare time</p>
   <ul class="project-list">
-    <li>Display content to watch, read, and play using HTML and CSS</li>
-    <li>Use JavaScript to: display date and time, randomly select and display quotes, and allow family safe filter for website content</li>
-    <li>Accomplish website content filtering and display with combination of HTML and JavaScript</li>
+    <li>Displayed content to watch, read, and play using HTML and CSS</li>
+    <li>Used JavaScript to: display date and time, randomly select and display quotes, and allow family safe filter for website content</li>
+    <li>Accomplished website content filtering and display with combination of HTML and JavaScript</li>
   </ul>
   <div class="skill-line"> HTML5 <span class="dot">·</span> CSS3 <span class="dot">·</span> JavaScript </div>
 </div>
 </a>
 
-      <a href="https://andyydongg.github.io/Pendragon-Mount/" target="_blank" class="project-link">
+<a href="https://andyydongg.github.io/Pendragon-Mount/" target="_blank" class="project-link">
 <div class="project">
   <h3>Pendragon Mount</h3>
-  <p class="org">Drexel University: INFO-151-001 | Web Systems and Services I Project</p>
+  <p class="org">Drexel University: INFO-151 | Web Systems and Services I Project</p>
   <div class="image">
   <img src="images/pendragonMount.png" alt="Pendragon Mount Project View" />
 </div>
@@ -141,6 +212,12 @@
         <img src="images/javascript-icon.png" alt="JavaScript Icon" />
       </div>
       <p class="skill-name">JavaScript</p>
+    </div>
+    <div class="skill">
+      <div class="skill-image">
+        <img src="images/windows-logo.png" alt="JavaScript Icon" />
+      </div>
+      <p class="skill-name">Windows 2022</p>
     </div>
   </div>
 </section>
@@ -253,6 +330,7 @@
     <p>Copyright © 2025 | Andy Dong</p>
   </footer>
 
+   <button class="dark-mode-toggle" aria-label="Toggle dark mode" id="darkModeToggle">🌙</button>
   <script>
   window.addEventListener('load', () => {
     const greetingText = "Hey, I’m Andy";
@@ -269,6 +347,31 @@
 
     typeNextLetter();
   });
+
+  const toggleButton = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Load saved mode from localStorage
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode === 'light') {
+      body.classList.add('light-mode');
+      toggleButton.textContent = '☀️'; // sun icon for light mode
+    } else {
+      toggleButton.textContent = '🌙'; // moon icon for dark mode
+    }
+
+    // Toggle mode on button click
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+
+      if (body.classList.contains('light-mode')) {
+        toggleButton.textContent = '☀️'; // sun icon
+        localStorage.setItem('mode', 'light');
+      } else {
+        toggleButton.textContent = '🌙'; // moon icon
+        localStorage.setItem('mode', 'dark');
+      }
+    });
 </script>
 
 </body>
