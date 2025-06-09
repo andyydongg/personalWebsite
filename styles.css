@@ -404,3 +404,197 @@ button:hover, .btn:hover, .cta:hover {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #121212;
+  color: #00bfff;
+  border: 2px solid #00bfff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  box-shadow: 0 0 10px #00bfff99;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode-toggle:hover,
+.dark-mode-toggle:focus {
+  background-color: #00bfff;
+  color: #121212;
+  outline: none;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #121212;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light-mode .nav {
+  background: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+}
+
+body.light-mode .logo,
+body.light-mode .hero h1,
+body.light-mode .card h2,
+body.light-mode .projects h2,
+body.light-mode .project .org,
+body.light-mode .tools-section h2,
+body.light-mode .hobbies-section h2,
+body.light-mode .skill,
+body.light-mode .tool,
+body.light-mode p.subtext,
+body.light-mode p,
+body.light-mode h3,
+body.light-mode ul,
+body.light-mode li,
+body.light-mode footer.footer p {
+  color: #121212;
+  text-shadow: none;
+  transition: color 0.3s ease;
+}
+
+body.light-mode a,
+body.light-mode .menu a,
+body.light-mode .pdf-fallback a {
+  color: #0077cc;
+  text-shadow: none;
+  transition: color 0.3s ease;
+}
+
+body.light-mode a:hover,
+body.light-mode .menu a:hover,
+body.light-mode .pdf-fallback a:hover,
+body.light-mode button:hover,
+body.light-mode .btn:hover,
+body.light-mode .cta:hover {
+  background-color: #0077cc;
+  color: #f5f5f5;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+body.light-mode p:hover,
+body.light-mode h3:hover,
+body.light-mode ul:hover,
+body.light-mode li:hover {
+  color: #0077cc;
+  cursor: pointer;
+}
+
+body.light-mode p.subtext:hover,
+body.light-mode p.subtext:focus {
+  color: #005999;
+  cursor: default;
+}
+
+body.light-mode footer.footer p:hover {
+  color: #0077cc;
+  cursor: default;
+}
+
+body.light-mode .card,
+body.light-mode .projects,
+body.light-mode .project,
+body.light-mode .hobby-item {
+  background-color: #ffffff;
+  border-color: #ddd;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+body.light-mode .project:hover,
+body.light-mode .hobby-item:hover {
+  box-shadow: 0 0 10px #0077cc55, 0 0 20px #0077cc33;
+  transform: translateY(-5px);
+}
+
+body.light-mode .social-icons a {
+  color: #0077cc;
+  transition: color 0.3s ease;
+}
+
+body.light-mode .social-icons a:hover:nth-child(1) {
+  color: #FF8C00;
+}
+
+body.light-mode .social-icons a:hover:nth-child(2) {
+  color: #005582;
+}
+
+body.light-mode .social-icons a:hover:nth-child(3) {
+  color: #32CD32;
+}
+
+body.light-mode .dark-mode-toggle {
+  background-color: #e0e0e0;
+  color: #0077cc;
+  border-color: #0077cc;
+  box-shadow: 0 0 10px #0077cc99;
+}
+
+body.light-mode .dark-mode-toggle:hover,
+body.light-mode .dark-mode-toggle:focus {
+  background-color: #0077cc;
+  color: #f5f5f5;
+  box-shadow: 0 0 15px #0077cc;
+}
+
+body.light-mode footer.footer {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+body.light-mode .project:hover .skill-line {
+  color: #000000; /* black */
+}
+
+/* Also ensure the dots inherit the color */
+body.light-mode .project:hover .skill-line .dot {
+  color: #000000;
+}
+
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    gap: 2rem; /* reduce gap on small screens */
+    flex-wrap: wrap;
+  }
+
+  .tools-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-grid {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #00bfff;
+  outline-offset: 3px;
+  box-shadow: 0 0 8px #00bfff99;
+}
+
