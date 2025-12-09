@@ -452,7 +452,7 @@
 
    <button class="dark-mode-toggle" aria-label="Toggle dark mode" id="darkModeToggle">🌙</button>
 
-   <script>
+ <script>
   window.addEventListener('load', () => {
     const greetingText = "Hey, I'm Andy";
     const greetingElement = document.getElementById("greeting");
@@ -472,15 +472,13 @@
   const toggleButton = document.getElementById('darkModeToggle');
   const body = document.body;
 
-  // Default to light mode and load saved preference
+  // Load saved mode from localStorage, default to dark
   const savedMode = localStorage.getItem('mode');
-  if (savedMode === 'dark') {
-    body.classList.remove('light-mode');
-    toggleButton.textContent = '🌙';
-  } else {
+  if (savedMode === 'light') {
     body.classList.add('light-mode');
-    toggleButton.textContent = '☀️';
-    localStorage.setItem('mode', 'light');
+    toggleButton.textContent = '☀️'; // sun icon for light mode
+  } else {
+    toggleButton.textContent = '🌙'; // moon icon for dark mode (default)
   }
 
   // Toggle mode on button click
@@ -488,10 +486,10 @@
     body.classList.toggle('light-mode');
 
     if (body.classList.contains('light-mode')) {
-      toggleButton.textContent = '☀️';
+      toggleButton.textContent = '☀️'; // sun icon
       localStorage.setItem('mode', 'light');
     } else {
-      toggleButton.textContent = '🌙';
+      toggleButton.textContent = '🌙'; // moon icon
       localStorage.setItem('mode', 'dark');
     }
   });
