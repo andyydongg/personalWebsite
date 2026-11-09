@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="script.js"></script>
   
-  <!-- SEO and social meta -->
   <meta name="description" content="Andy Dong | Portfolio - Projects, Resume, and Contact" />
   <meta property="og:title" content="Andy Dong Portfolio" />
   <meta property="og:description" content="Explore my work, resume, and contact info." />
@@ -37,11 +36,13 @@
     <a href="http://www.github.com/andyydongg" target="_blank" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
     <a href="http://www.linkedin.com/in/aandydongg/" target="_blank" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
     <a href="mailto:andydong281@gmail.com" aria-label="Send email"><i class="fas fa-envelope"></i></a>
+    <!-- may need to change due to upwork change to Go-Lifted -->
+    <a href="https://www.upwork.com/freelancers/~01f5eaa3446b7cb6d6?mp_source=share" aria-label="Upwork Profile"><i class="fa-brands fa-upwork"></i></a>
   </div>
 
   <section id="about" class="card" aria-labelledby="about-title">
     <h2 id="about-title">About</h2>
-    <p>Hello! I am a senior currently majoring in Computing and Security Technology (CST) at Drexel's College of Computing & Informatics (CCI) with an concentration in computing technology and a minor in management information system (MIS). Feel free to reach out and connect!</p>
+    <p>College undergrad senior currently majoring in Computing and Security Technology (CST) at Drexel's School of Computer and Information Sciences (SCIS) with an concentration in computing technology and a minor in management information system (MIS). Feel free to reach out and connect!</p>
   </section>
 
   <section id="projects" class="projects" aria-labelledby="projects-title">
@@ -49,10 +50,119 @@
     <p class="subtext">Here are some projects that I have done:</p>
     <div class="project-grid">
 
+<div class="project">
+  <h3>Play-Color Game Database Engine</h3>
+  <p class="org">May 2026</p>
+  <!-- Play-Color Game Database Engine -->
+  <div class="image">
+    <img src="images/oracle-sql-dev_wide.jpg" alt="Play-Color Game Database Engine Project"/>
+  </div>
+  <p>In this project I:</p>
+  <ul class="project-list">
+    <li>Built a robust backend that handles the entire game flow—from referee gameboard creation and player join logic to turn-based tile painting</li>
+    <li>Engineered a dynamic "stealing" mechanic that automatically steals adjacent tiles of the same color from opponents</li>
+    <li>Designed a normalized physical data model for Oracle 19c with 5 core tables and implemented comprehensive validation procedures</li>
+    <li>Implemented game-over detection and enforced strict rules (max players, color availability, tile ownership) to prevent illegal moves</li>
+    <li>Collaborated using Redgate Data Modeler (formerly known as Vertabelo) for data modeling and Oracle SQL Developer for debugging and testing</li>
+  </ul>
+  <div class="skill-line"> Oracle Database 19c <span class="dot">·</span> Redgate Data Modeler <span class="dot">·</span> Oracle SQL Developer</div>
+</div>
+
+<div class="project">
+  <h3>Cloud OSINT Recon</h3>
+  <p class="org">May 2026</p>
+  <!-- Cloud OSINT Recon -->
+  <div class="image">
+    <img src="images/OSINT.webp" alt="Cloud OSINT Recon Project"/>
+  </div>
+  <p>In this project I:</p>
+  <ul class="project-list">
+    <li>Fingerprinted live AWS API Gateway endpoints by searching SSL/TLS certificate common names in Shodan</li>
+    <li>Deconstructed an exposed AWS ARN to identify the account ID, region, service, and internal queue naming conventions</li>
+    <li>Used AWSeye to enumerate publicly exposed resources tied to the AWS account, including an IAM role ARN and an SQS queue</li>
+    <li>Analyzed Microsoft’s Azure IP Ranges file to understand service-tag abuse, firewall bypass risks, and targeted cloud scanning</li>
+    <li>Used Censys to geolocate Azure-hosted IPs and identify open ports, including Web Deploy port 8172, and exposed software stacks</li>
+  </ul>
+  <div class="skill-line"> Shodan <span class="dot">·</span> AWSeye <span class="dot">·</span> Censys <span class="dot">·</span> Azure IP Ranges <span class="dot">·</span> OSINT</div>
+</div>
+
+<a href="https://www.kali.org/docs/troubleshooting/basic-troubleshooting/" target="_blank" class="project-link">
+<div class="project">
+  <h3>Linux Purple Team Logging Lab</h3>
+  <p class="org">May 2026</p>
+  <!-- Kali Linux -->
+  <div class="image">
+  <img src="images/kali-linux.jpg" alt="Linux Purple Team Logging Lab Project"/>
+</div>
+  <p>For this project I:</p>
+  <ul class="project-list">
+    <li>Created and deleted a Linux user, then traced the activity through systemd journal logs</li>
+    <li>Built and scheduled a Bash script via cron, then identified its execution logs</li>
+    <li>Tested log tampering by rotating and vacuuming journal entries to erase evidence</li>
+    <li>Simulated evasion by manually editing <code>/etc/passwd</code> and <code>/etc/shadow</code> to avoid <code>useradd</code> logs</li>
+    <li>Simulated stealth persistence using a <code>.bashrc</code> time-checking loop to avoid cron log entries</li>
+  </ul>
+  <div class="skill-line"> Kali Linux <span class="dot">·</span> systemd-journald <span class="dot">·</span> Bash <span class="dot">·</span> cron <span class="dot">·</span> VirtualBox</div>
+</div>
+</a>
+
+<a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code" target="_blank" class="project-link">
+<div class="project">
+  <h3>Vertex AI TensorBoard with Terraform</h3>
+  <p class="org">May 2026</p>
+  <!-- Terraform -->
+  <div class="image">
+  <img src="images/terraform.png" alt="Terraform Vertex AI TensorBoard Project"/>
+</div>
+  <p>In this project I:</p>
+  <ul class="project-list">
+    <li>Automated the provisioning of Vertex AI TensorBoard environments using Terraform Infrastructure as Code (IaC) to ensure reproducible ML experiment tracking</li>
+    <li>Enabled the Vertex AI API via <code>google_project_service</code> and created a TensorBoard instance with <code>google_vertex_ai_tensorboard</code>, applying best practices like <code>depends_on</code> and <code>disable_on_destroy = false</code></li>
+    <li>Used Terraform outputs to dynamically retrieve the TensorBoard name and resource ID, streamlining integration with ML workflows and cloud console access</li>
+    <li>Version-controlled the entire infrastructure configuration to support consistent, repeatable experiment environments across the data science team</li>
+  </ul>
+  <div class="skill-line"> Terraform <span class="dot">·</span> Google Cloud Platform <span class="dot">·</span> Vertex AI TensorBoard <span class="dot">·</span> Docker</div>
+</div>
+</a>
+
+<div class="project">
+  <h3>Cloud Exposure Discovery & Secret Scanning</h3>
+  <p class="org">April 2026</p>
+  <!-- cloud -->
+  <div class="image">
+  <img src="images/cloud-security.jpg" alt="Cloud Project"/>
+</div>
+  <p>For this project I:</p>
+  <ul class="project-list">
+    <li>Discovered publicly exposed cloud storage buckets across AWS S3, Azure Blob, and Alibaba OSS using GrayHatWarfare, developing targeted keyword strategies (backup, data, .zip, config, password, token) to identify sensitive data without accessing any files</li>
+    <li>Deployed and executed TruffleHog secret scanning against the test_keys repository to detect hardcoded credentials, API keys, and tokens, analyzing unverified findings in an Android APK file</li>
+    <li>Documented the entire process including tool installation, scanning procedures, and findings to demonstrate real‑world cloud security assessment techniques</li>
+  </ul>
+  <div class="skill-line"> GrayHatWarfare <span class="dot">·</span> TruffleHog <span class="dot">·</span> Kali Linux <span class="dot">·</span> GitHub</div>
+</div>
+
+<a href="https://andy-dong-281.vercel.app/" target="_top" class="project-link">
+<div class="project">
+  <h3>Personal Portfolio Website</h3>
+  <p class="org">June 2025 - Present</p>
+  <div class="image">
+  <img src="images/personal_website.png" alt="Personal Website"/>
+</div>
+  <p>This project features:</p>
+  <ul class="project-list">
+    <li>Built using AI collaboration – Leveraged DeepSeek for initial code structure, then customized with personal content, styling, and images</li>
+    <li>Modern, responsive portfolio – Features dark/light mode toggle, typewriter effect, and organized project showcase with date ranges</li>
+    <li>Showcases cybersecurity & development skills – Highlights technical projects, tools, and academic experience in a professional layout</li>
+    <li>Deployed via GitHub + Vercel – Fully hosted portfolio with clean UI, embedded resume, and social links for recruiters and connections</li>
+  </ul>
+  <div class="skill-line"> Deepseek <span class="dot">·</span> Github <span class="dot">·</span> Vercel <span class="dot">·</span> CSS3</div>
+</div>
+</a>
+
 <a href="https://memquotes.vercel.app/" target="_blank" class="project-link">
 <div class="project">
   <h3>MemQuotes - Movie Quote Tracker</h3>
-  <p class="org">November 2025 - Present</p>
+  <p class="org">November 2025 - January 2026</p>
   <!-- Movie Quote Tracker -->
   <div class="image">
   <img src="images/memQuotes.png" alt="MemQuotes"/>
@@ -67,25 +177,6 @@
     <li>Built with assistance from Claude AI</li>
   </ul>
   <div class="skill-line"> Claude.ai <span class="dot">·</span> Github <span class="dot">·</span> Vercel <span class="dot">·</span> HTML5</div>
-</div>
-</a>
-
-<a href="#" target="_top" class="project-link">
-<div class="project">
-  <h3>Personal Portfolio Website</h3>
-  <p class="org">June 2025 - Present</p>
-  <!-- Personal Website -->
-  <div class="image">
-  <img src="images/personal_website.png" alt="Personal Website"/>
-</div>
-  <p>This project features:</p>
-  <ul class="project-list">
-    <li>Built using AI collaboration – Leveraged DeepSeek for initial code structure, then customized with personal content, styling, and images</li>
-    <li>Modern, responsive portfolio – Features dark/light mode toggle, typewriter effect, and organized project showcase with date ranges</li>
-    <li>Showcases cybersecurity & development skills – Highlights technical projects, tools, and academic experience in a professional layout</li>
-    <li>Deployed via GitHub + Vercel – Fully hosted portfolio with clean UI, embedded resume, and social links for recruiters and connections</li>
-  </ul>
-  <div class="skill-line"> Deepseek <span class="dot">·</span> Github <span class="dot">·</span> Vercel <span class="dot">·</span> CSS3</div>
 </div>
 </a>
 
@@ -259,7 +350,7 @@
 
 <section id="skills" class="skills-section card">
   <h2>Skills</h2>
-  <p class="section-subtext">Here are some of the technical skills I’ve have experiences with:</p>
+  <p class="section-subtext">Here are some of the technical skills that I have developed over the years:</p>
   <div class="skills-grid">
     <div class="skill">
       <div class="skill-image">
@@ -326,7 +417,7 @@
 
   <section id="tools" class="tools-section card">
   <h2>Tools</h2>
-  <p class="section-subtext">These are some tools I frequently use during my work:</p>
+  <p class="section-subtext">Here are some tools I have used during and throughout my work:</p>
   <div class="tools-grid">
     <div class="tool">
       <div class="tool-image">
@@ -366,9 +457,21 @@
     </div>
     <div class="tool">
       <div class="tool-image">
+        <img src="images/redgate-data-modeler.webp" alt="Redgate Data Modeler Logo" />
+      </div>
+      <p class="tool-name">Redgate Data Modeler</p>
+    </div>
+    <div class="tool">
+      <div class="tool-image">
         <img src="images/Oracle_SQL_Developer-Logo.png" alt="Oracle SQL Developer Logo" />
       </div>
       <p class="tool-name">Oracle SQL Developer</p>
+    </div>
+     <div class="tool">
+      <div class="tool-image">
+        <img src="images/qualitrics-logo.png" alt="Qualtrics Logo" />
+      </div>
+      <p class="tool-name">Qualtrics</p>
     </div>
     <div class="tool">
       <div class="tool-image">
@@ -434,24 +537,14 @@
       <p class="hobby-desc">How to unlock meaning, maximize happiness, and leave a lasting legacy</p>
     </div>
     </a>
-    <a href="https://www.imdb.com/title/tt7181546/" target="_blank" class="project-link">
+    <a href="https://www.netacad.com/courses/ethical-hacker?courseLang=en-US" target="_blank" class="project-link">
     <div class="hobby-item">
-      <h3>Watching</h3>
-      <p class="hobby-title">Ballerina</p>
+      <h3>Studying</h3>
+      <p class="hobby-title">Ethical Hacker</p>
       <div class="hobby-image">
-        <img src="images/ballerina.jpg" alt="Ballerina Movie Poster" />
+        <img src="images/ethical_hacker.jpg" alt="CISCO Ethical Hacker" />
       </div>
-      <p class="hobby-desc">An assassin sets out to seek revenge after her father's death</p>
-    </div>
-    </a>
-    <a href="https://www.imdb.com/title/tt6604188/" target="_blank" class="project-link">
-    <div class="hobby-item">
-      <h3>Awaiting</h3>
-      <p class="hobby-title">Tron: Ares</p>
-      <div class="hobby-image">
-        <img src="images/tronAres.jpg" alt="Tron: Ares Movie Poster" />
-      </div>
-      <p class="hobby-desc">Ares is sent from the digital world into the real world on a dangerous mission</p>
+      <p class="hobby-desc">CISCO Networking Academcy: Learn the art of offensive security to uncover cyber threats and vulnerabilities before cybercriminals do</p>
     </div>
     </a>
     <a href="https://www.sohu.com/a/796855190_121117448" target="_blank" class="project-link">
@@ -464,14 +557,14 @@
       <p class="hobby-desc">China: Shou Xian Gu is an famous tourist attraction featuring a refreshing scenery for all ages</p>
     </div>
     </a>
-    <a href="https://www.netacad.com/courses/ethical-hacker?courseLang=en-US" target="_blank" class="project-link">
+    <a href="John Wick: Chapter 5" target="_blank" class="project-link">
     <div class="hobby-item">
-      <h3>Studying</h3>
-      <p class="hobby-title">Ethical Hacker</p>
+      <h3>Awaiting</h3>
+      <p class="hobby-title">John Wick: Chapter 5</p>
       <div class="hobby-image">
-        <img src="images/ethical_hacker.jpg" alt="CISCO Ethical Hacker" />
+        <img src="images/john-wick.jpg" alt="Tron: Ares Movie Poster" />
       </div>
-      <p class="hobby-desc">CISCO Networking Academcy: Learn the art of offensive security to uncover cyber threats and vulnerabilities before cybercriminals do</p>
+      <p class="hobby-desc">Currently under development</p>
     </div>
     </a>
   </div>
@@ -487,7 +580,7 @@
 </section>
 
   <footer class="footer" role="contentinfo">
-    <p>Copyright © 2025 | Andy Dong | andydong281@gmail.com</p>
+    <p>Copyright © 2026 | Andy Dong | andydong281@gmail.com</p>
   </footer>
 
    <button class="dark-mode-toggle" aria-label="Toggle dark mode" id="darkModeToggle">🌙</button>
@@ -516,9 +609,9 @@
   const savedMode = localStorage.getItem('mode');
   if (savedMode === 'light') {
     body.classList.add('light-mode');
-    toggleButton.textContent = '☀️'; // sun icon for light mode
+    toggleButton.textContent = '☀️';
   } else {
-    toggleButton.textContent = '🌙'; // moon icon for dark mode (default)
+    toggleButton.textContent = '🌙'; // default
   }
 
   // Toggle mode on button click
@@ -526,10 +619,10 @@
     body.classList.toggle('light-mode');
 
     if (body.classList.contains('light-mode')) {
-      toggleButton.textContent = '☀️'; // sun icon
+      toggleButton.textContent = '☀️';
       localStorage.setItem('mode', 'light');
     } else {
-      toggleButton.textContent = '🌙'; // moon icon
+      toggleButton.textContent = '🌙';
       localStorage.setItem('mode', 'dark');
     }
   });

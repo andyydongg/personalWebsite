@@ -45,7 +45,7 @@ body {
 }
 
 .menu a:hover {
-  color: #00bfff; /* Tech blue hover */
+  color: #00bfff;
 }
 
 .hero {
@@ -60,10 +60,11 @@ body {
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #00bfff; /* Tech blue headline */
+  color: #00bfff;
 }
 
-.card, .projects {
+.card,
+.projects {
   margin: 2rem auto;
   padding: 2rem;
   max-width: 900px;
@@ -72,9 +73,10 @@ body {
   border-radius: 12px;
 }
 
-.card h2, .projects h2 {
+.card h2,
+.projects h2 {
   font-size: 1.8rem;
-  color: #00bfff; /* Tech blue section titles */
+  color: #00bfff;
   margin-bottom: 1rem;
 }
 
@@ -121,7 +123,7 @@ body {
 .project .org {
   font-weight: bold;
   margin-top: 0.5rem;
-  color: #00bfff; /* Tech blue org name */
+  color: #00bfff;
 }
 
 .resume-view {
@@ -167,26 +169,38 @@ body {
   color: #ffffff;
   font-size: 2rem;
   transition: color 0.3s ease, transform 0.3s ease;
+  background: transparent;
+  text-shadow: none;
 }
 
 .social-icons a:hover {
   transform: scale(1.2);
+  background: transparent;
+  text-shadow: none;
 }
 
+/* Dark mode social icon hover colors */
 .social-icons a:nth-child(1):hover {
-  color: #FFA500; /* GitHub - orange */
+  color: #FFA500;
 }
 
 .social-icons a:nth-child(2):hover {
-  color: #0077b5; /* LinkedIn - blue */
+  color: #0077b5;
 }
 
 .social-icons a:nth-child(3):hover {
-  color: #90EE90; /* Email - light green */
+  color: #90EE90;
+}
+
+.social-icons a:nth-child(4):hover {
+  color: #14a800;
 }
 
 /* Glow Effect Enhancements */
-.hero h1, .card h2, .projects h2, .project .org {
+.hero h1,
+.card h2,
+.projects h2,
+.project .org {
   text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
 }
 
@@ -212,10 +226,12 @@ a:hover {
 }
 
 .project-list li::marker {
-  color: #00bfff; /* Tech blue bullets */
+  color: #00bfff;
 }
 
-button, .btn, .cta {
+button,
+.btn,
+.cta {
   background: transparent;
   border: 2px solid #00bfff;
   color: #00bfff;
@@ -226,7 +242,9 @@ button, .btn, .cta {
   transition: all 0.3s ease-in-out;
 }
 
-button:hover, .btn:hover, .cta:hover {
+button:hover,
+.btn:hover,
+.cta:hover {
   background-color: #00bfff;
   color: #0d0d0d;
   box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
@@ -473,9 +491,17 @@ body.light-mode .pdf-fallback a {
   transition: color 0.3s ease;
 }
 
+/* Light Mode General Links */
 body.light-mode a:hover,
 body.light-mode .menu a:hover,
-body.light-mode .pdf-fallback a:hover,
+body.light-mode .pdf-fallback a:hover {
+  color: #005999;
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* Light Mode Buttons */
 body.light-mode button:hover,
 body.light-mode .btn:hover,
 body.light-mode .cta:hover {
@@ -483,6 +509,41 @@ body.light-mode .cta:hover {
   color: #f5f5f5;
   box-shadow: none;
   text-shadow: none;
+}
+
+/* Light Mode Social Icons */
+body.light-mode .social-icons a {
+  background-color: transparent !important;
+  color: #0077cc;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body.light-mode .social-icons a:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: scale(1.2);
+}
+
+/* GitHub */
+body.light-mode .social-icons a:nth-child(1):hover {
+  color: #FF8C00;
+}
+
+/* LinkedIn */
+body.light-mode .social-icons a:nth-child(2):hover {
+  color: #005582;
+}
+
+/* Email */
+body.light-mode .social-icons a:nth-child(3):hover {
+  color: #32CD32;
+}
+
+/* Upwork */
+body.light-mode .social-icons a:nth-child(4):hover {
+  color: #14a800;
 }
 
 body.light-mode p:hover,
@@ -520,23 +581,6 @@ body.light-mode .hobby-item:hover {
   transform: translateY(-5px);
 }
 
-body.light-mode .social-icons a {
-  color: #0077cc;
-  transition: color 0.3s ease;
-}
-
-body.light-mode .social-icons a:hover:nth-child(1) {
-  color: #FF8C00;
-}
-
-body.light-mode .social-icons a:hover:nth-child(2) {
-  color: #005582;
-}
-
-body.light-mode .social-icons a:hover:nth-child(3) {
-  color: #32CD32;
-}
-
 body.light-mode .dark-mode-toggle {
   background-color: #e0e0e0;
   color: #0077cc;
@@ -558,14 +602,12 @@ body.light-mode footer.footer {
 }
 
 body.light-mode .project:hover .skill-line {
-  color: #000000; /* black */
-}
-
-/* Also ensure the dots inherit the color */
-body.light-mode .project:hover .skill-line .dot {
   color: #000000;
 }
 
+body.light-mode .project:hover .skill-line .dot {
+  color: #000000;
+}
 
 /* Responsive tweaks for smaller screens */
 @media (max-width: 600px) {
@@ -574,7 +616,7 @@ body.light-mode .project:hover .skill-line .dot {
   }
 
   .social-icons {
-    gap: 2rem; /* reduce gap on small screens */
+    gap: 2rem;
     flex-wrap: wrap;
   }
 
@@ -598,3 +640,8 @@ button:focus {
   box-shadow: 0 0 8px #00bfff99;
 }
 
+/* Keep social icons transparent when focused in light mode */
+body.light-mode .social-icons a:focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
